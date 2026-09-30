@@ -1,0 +1,31 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  psscriptanalyzer:
+    runs-on: windows-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: PSScriptAnalyzer installieren
+        shell: powershell
+        run: |
+          Install-Module -Name PSScriptAnalyzer -RequiredVersion 1.25.0 -Scope CurrentUser -Force
+
+      - name: Skripte pruefen
+        shell: powershell
+        run: |
+          $ergebnis = Invoke-ScriptAnalyzer -Path .\scripts -Recurse -Settings .\PSScriptAnalyzerSettings.psd1
+          if ($ergebnis) {
+            $ergebnis | Format-Table -AutoSize RuleName, Severity, ScriptName, Line, Message | Out-String -Width 250
+            throw ('PSScriptAnalyzer: {0} Befund(e)' -f @($ergebnis).Count)
+          }
+          'PSScriptAnalyzer: keine Befunde'
