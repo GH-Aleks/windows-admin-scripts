@@ -1,0 +1,14 @@
+{
+  "_comment": "Paketliste fuer Install-DevWorkstation.ps1. id = exakte winget-ID, optional = nur mit -IncludeOptional.",
+  "packages": [
+    { "id": "Git.Git", "name": "Git", "optional": false },
+    { "id": "Microsoft.VisualStudioCode", "name": "Visual Studio Code", "optional": false },
+    { "id": "Notepad++.Notepad++", "name": "Notepad++", "optional": false },
+    { "id": "Microsoft.WindowsTerminal", "name": "Windows Terminal", "optional": false },
+    { "id": "Microsoft.PowerShell", "name": "PowerShell 7", "optional": false },
+    { "id": "7zip.7zip", "name": "7-Zip", "optional": false },
+    { "id": "OpenJS.NodeJS.LTS", "name": "Node.js LTS", "optional": false },
+    { "id": "Python.Python.3.13", "name": "Python 3.13", "optional": true },
+    { "id": "Docker.DockerDesktop", "name": "Docker Desktop", "optional": true }
+  ]
+}

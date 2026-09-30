@@ -1,0 +1,10 @@
+# VS-Code-Erweiterungen fuer Install-DevWorkstation.ps1
+# Eine Erweiterungs-ID je Zeile (Herausgeber.Name). Zeilen mit # sind Kommentare.
+ms-vscode.powershell
+ms-python.python
+eamodio.gitlens
+editorconfig.editorconfig
+esbenp.prettier-vscode
+ms-azuretools.vscode-docker
+redhat.vscode-yaml
+ms-ceintl.vscode-language-pack-de
