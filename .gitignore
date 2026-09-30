@@ -1,0 +1,22 @@
+# Ausgaben und Berichte der Skripte (koennen Systemdaten enthalten)
+*.log
+SystemInfo_*.txt
+SystemInfo_*.json
+SystemInfo_*.html
+bericht*.*
+output/
+temp/
+tmp/
+
+# Editor, Betriebssystem
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+*.bak
+*.swp
+
+# Geheimnisse (Sicherheitsnetz)
+.env
+*.pfx
+*.key
